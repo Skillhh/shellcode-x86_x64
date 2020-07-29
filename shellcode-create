@@ -1,3 +1,0 @@
-#!/bin/bash
-
-for i in $(objdump -D obj.o | grep "^ " | cut -f2); do echo -n '\x'$i; done;echo
