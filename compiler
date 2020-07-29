@@ -1,2 +1,0 @@
-nasm -f elf64 <assembler_file>.nasm -o <obj_file>.o
-ld <obj_file>.o -o <executable>
