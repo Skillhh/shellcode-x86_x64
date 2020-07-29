@@ -16,7 +16,7 @@ _start:
 	mov rdi, rax
 ;structure  
 	xor rax, rax
-	push dword 0x01a8c0	; ip addres 
+	push dword 0x0100007f	; ip addres 
 	push word 0xd204		; port
 	push word 0x02			; AF_INET - IPv4 Protocol
 ; move structure to rsi register
